@@ -1,0 +1,26 @@
+python manage.py runserver
+
+python manage.py migrate 
+
+python manage.py makemigrations "app name"
+
+python manage.py createsuperuser
+
+python manage.py shell
+
+
+database create data
+
+> from vendor import Food, Vendor
+
+> Vendor.objects.all() # show data objects
+
+> Vendor.objects.create(vendor_name = "Alex" , store_name="Apple", phone_number="0966085725", address="Taepei") # Create data
+
+> vendor = Vendor.objects.get(id=1) # Get data that id =1
+
+> vendor.vendor_name # show value
+
+> Vendor.objects.filter(vendor_name="Alex").update(address="USA") #Update data
+
+>Vendor.objects.get(id=1).delete() #Delete data
